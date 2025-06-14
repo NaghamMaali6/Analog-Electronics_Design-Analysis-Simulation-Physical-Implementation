@@ -6,4 +6,4 @@ To find the correct resistor values, we analyzed the circuit using formulas for 
  
 ![image](https://github.com/user-attachments/assets/ccc34a00-573b-40a2-8339-10dddc68fe5d)
 
-all in Report.docx
+all in Report.docx file: https://github.com/NaghamMaali6/Analog-Electronics_Design-Analysis-Simulation-Physical-Implementation/blob/main/Report.docx
