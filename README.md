@@ -1,1 +1,9 @@
-# Analog-Electronics-Design-Analysis-Simulation-Physical-Implementation
+# Analog-Electronics: Design-Analysis-Simulation-Physical-Implementation
+
+This project is about designing and testing an analog circuit that takes a sensor signal ranging from 0.2V to 2.5V and converts it into an output that ranges from 0V to 5V. The purpose of this conversion is to match the sensor's output to a full-scale range that can be read by other systems like ADCs (Analog-to-Digital Converters). The circuit uses three operational amplifiers from an LM324 IC, and each stage has a specific role.
+The first op-amp stage uses a 6.2V Zener diode and a voltage divider made of a 100Ω resistor and a resistor Ry. This stage is configured as a voltage follower, meaning it copies the voltage from the divider and outputs it as a fixed reference voltage Va. The second op-amp is also a voltage follower, and its job is to copy the input voltage from the sensor, which we call Vin. Its output is called Vb and is equal to Vin. The third op-amp is a differential amplifier. It receives both Va and Vb and outputs the difference between them, scaled by a resistor Rx. By carefully choosing the values of Rx and Ry, the circuit makes sure that the output voltage Vout changes smoothly from 0V to 5V as the sensor input moves from 0.2V to 2.5V.
+To find the correct resistor values, we analyzed the circuit using formulas for voltage dividers and differential amplifiers. We found that using Ry = 3kΩ and Rx ≈ 21.73913kΩ gives the correct behavior. These values make sure that Vout is 0V when Vin is 0.2V and 5V when Vin is 2.5V. After calculating the resistor values, we tested the circuit in simulation using PSpice and then built it using the LM324 chip on a breadboard. We measured and recorded the voltages at important points in the circuit for several input values between 0.1V and 3.0V. The results from the hand calculations, simulation, and real measurements were compared and showed good agreement.
+ 
+![image](https://github.com/user-attachments/assets/ccc34a00-573b-40a2-8339-10dddc68fe5d)
+
+all in Report.docx
